@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1845D8911B9906A60092410D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845D8901B9906A60092410D /* AppDelegate.swift */; };
-		1845D8931B9906A60092410D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845D8921B9906A60092410D /* ViewController.swift */; };
+		1845D8931B9906A60092410D /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845D8921B9906A60092410D /* AddViewController.swift */; };
 		1845D8961B9906A60092410D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1845D8941B9906A60092410D /* Main.storyboard */; };
 		1845D8981B9906A60092410D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1845D8971B9906A60092410D /* Images.xcassets */; };
 		1845D89B1B9906A60092410D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1845D8991B9906A60092410D /* LaunchScreen.xib */; };
 		1845D8A71B9906A60092410D /* ScavengerHuntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845D8A61B9906A60092410D /* ScavengerHuntTests.swift */; };
+		1845D8B11B9923200092410D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845D8B01B9923200092410D /* ListViewController.swift */; };
+		18AAF1911B993CE5004156A6 /* ScavengerHuntItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AAF1901B993CE5004156A6 /* ScavengerHuntItem.swift */; };
+		18AAF1931B99510B004156A6 /* ItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AAF1921B99510B004156A6 /* ItemsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		1845D88B1B9906A60092410D /* ScavengerHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScavengerHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1845D88F1B9906A60092410D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1845D8901B9906A60092410D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1845D8921B9906A60092410D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1845D8921B9906A60092410D /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		1845D8951B9906A60092410D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1845D8971B9906A60092410D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1845D89A1B9906A60092410D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1845D8A01B9906A60092410D /* ScavengerHuntTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScavengerHuntTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1845D8A51B9906A60092410D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1845D8A61B9906A60092410D /* ScavengerHuntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScavengerHuntTests.swift; sourceTree = "<group>"; };
+		1845D8B01B9923200092410D /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		18AAF1901B993CE5004156A6 /* ScavengerHuntItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScavengerHuntItem.swift; sourceTree = "<group>"; };
+		18AAF1921B99510B004156A6 /* ItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				1845D8901B9906A60092410D /* AppDelegate.swift */,
-				1845D8921B9906A60092410D /* ViewController.swift */,
+				1845D8921B9906A60092410D /* AddViewController.swift */,
 				1845D8941B9906A60092410D /* Main.storyboard */,
+				18AAF1901B993CE5004156A6 /* ScavengerHuntItem.swift */,
+				1845D8B01B9923200092410D /* ListViewController.swift */,
+				18AAF1921B99510B004156A6 /* ItemsManager.swift */,
 				1845D8971B9906A60092410D /* Images.xcassets */,
 				1845D8991B9906A60092410D /* LaunchScreen.xib */,
 				1845D88E1B9906A60092410D /* Supporting Files */,
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1845D8931B9906A60092410D /* ViewController.swift in Sources */,
+				1845D8931B9906A60092410D /* AddViewController.swift in Sources */,
 				1845D8911B9906A60092410D /* AppDelegate.swift in Sources */,
+				18AAF1911B993CE5004156A6 /* ScavengerHuntItem.swift in Sources */,
+				1845D8B11B9923200092410D /* ListViewController.swift in Sources */,
+				18AAF1931B99510B004156A6 /* ItemsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +423,7 @@
 				1845D8AC1B9906A60092410D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1845D8AD1B9906A60092410D /* Build configuration list for PBXNativeTarget "ScavengerHuntTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +432,7 @@
 				1845D8AF1B9906A60092410D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
