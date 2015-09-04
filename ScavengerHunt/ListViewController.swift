@@ -9,13 +9,29 @@
 import Foundation
 import UIKit
 
-class ListViewController: UITableViewController {
+class ListViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 //    var itemsList = [ScavengerHuntItem(name: "Cat"),
 //                    ScavengerHuntItem(name: "🍕"),
 //                    ScavengerHuntItem(name: "📷")]
     
     let myManager = ItemsManager()
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            imagePicker.sourceType = .Camera
+        } else {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        
+        imagePicker.delegate = self
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myManager.items.count
