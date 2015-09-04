@@ -31,6 +31,19 @@ class ListViewController: UITableViewController, UIImagePickerControllerDelegate
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        
+        if let indexPath = tableView.indexPathForSelectedRow() {
+            let selectedItem = myManager.items[indexPath.row]
+            let photo = info[UIImagePickerControllerOriginalImage] as! UIImage
+            selectedItem.photo = photo
+            myManager.save()
+            dismissViewControllerAnimated(true, completion: {
+                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            })
+        }
+    }
+    
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +54,15 @@ class ListViewController: UITableViewController, UIImagePickerControllerDelegate
         let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath) as! UITableViewCell
         
         let item = myManager.items[indexPath.row]
+        
+        if item.isCompleted {
+            cell.accessoryType = .Checkmark
+            cell.imageView?.image = item.photo
+        } else {
+            cell.accessoryType = .None
+            cell.imageView?.image = nil
+        }
+        
         cell.textLabel?.text = item.name
         
         return cell
